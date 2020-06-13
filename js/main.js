@@ -18,15 +18,14 @@
      }
 
 
-
      function increaselike(i) {
          film[i].like = Number(film[i].like) + 1;
          document.getElementById(film[i].idnum).innerHTML = film[i].like;
      };
 
-     $('#sortbylike').click(classify)
+     $('#sortbylike').click(classify);
 
-     function classify() {
+     function classify(){
          console.log("the function is called in firefox but not in chrome")
          film.sort(function(a, b) {
              return (Number(b.like) - Number(a.like));
@@ -48,9 +47,9 @@
          }
      }
 
-     $('#sortbyname').click(classify2)
+     $('#sortbyname').click(classify2);
 
-     function classify2() {
+     function classify2(){
          console.log("the function is called in firefox but not in chrome")
 
          film.sort(function(a, b) {
@@ -75,7 +74,4 @@
              });
          }
      }
-
-     console.log(film)
-
  })
